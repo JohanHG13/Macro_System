@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type= "text/css" href="../css/estilos.css">
+  <title>Inicio de Seción</title>
+</head>
+<body>
+
+<header>
+    <table>
+        <a href="#" class="logo">
+        <img src="../img/logo.jpg"  alt="#">
+        </a>
+    </table>
+</header>
+<main>
+
+<form class="login " action="login.php" method="POST" >
+<div class="ali">
+    <h3>Inicio de Secion</h3>
+    
+    <label for="validationCustom01"></label>
+    <input type="email"  id="validationCustom01" name="correo" required  placeholder="Correo ">
+
+    <div class="valid-feedback">
+        
+    </div>
+  	<div class="invalid-feedback">
+        
+    </div>
+    <label for="validationCustom02"></label>
+    <input type="password"  id="validationCustom02" name="contraseña" required placeholder="Contraseña">
+
+    <div class="valid-feedback">
+       
+    </div>
+  	<div class="invalid-feedback">
+        
+    </div>
+    <div class="form-check row " >
+        <input class="aptoti" type="checkbox" value="" id="invalidCheck" required>
+        <label class="aptotl" for="invalidCheck">
+        Acepto terminos y condiciones 
+        </label>
+        <div class="valid-feedback">
+    
+        </div>
+  	    <div class="invalid-feedback">
+        
+        </div>
+    </div>
+    <input class="btnR" type="submit" value="Ingresar">
+    <p><a href="../Clientes/registroClientes.html">Registrarse</a></p>
+    <p><a href="olvidecontraseña.html">olvide mi contraseña</a></p>
+    
+</div>
+</form>
+</main>
+<script type="text/javascript">
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+</body>
+</html>

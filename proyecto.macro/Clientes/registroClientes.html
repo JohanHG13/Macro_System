@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <title>Resgistro</title>
+</head>
+<body>
+
+<header>
+    <table>
+        <a href="#" class="logo">
+        <img src="../img/logo.jpg"  alt="#">
+        </a>
+    </table>
+
+</header>
+<main>
+<form class="login" action="registroCli.php" method="post">
+<div class="row ali">
+    <h3>Registro Clientes</h3>
+    <input type="hidden" name="id_rol" value="2">  
+    <input type="text" name="nombre" required placeholder="Ingrese su Nombre">
+    <input type="text" name="apellido" required placeholder="Ingrese sus Apellidos">
+    <select class="op">
+      <option selected disabled value="">Seleccione tipo de Documento</option>
+      <option value="">Cedula Cuidadania</option>
+      <option value="">Cedula Extranjería</option>
+      <option value="">Cedula Pasaporte</option>
+      <option value="">NIT</option>
+    </select>
+    <input type="number" name="id_usuario" required placeholder="Ingrese su Documento">
+    <input type="email" name="correo" required placeholder="Ingresa Correo">
+    <input type="number" name="telefono" required placeholder="Ingresa Numero Celular">
+    <input type="password" name="contraseña" required placeholder="Contraseña">
+    <input type="text" name="direccion" required placeholder="Direccion">
+    <input type="date" name="fecha_nacimiento" required placeholder="Fecha de Nacimiento">
+    <input class="aptoti" type="checkbox" value="" id="invalidCheck" required>
+        <label class="aptotl" for="invalidCheck">
+            Acepto terminos y condiciones 
+        </label>
+        <div class="valid-feedback">
+        
+        </div>
+        <div class="invalid-feedback">
+            
+        </div>
+        <input class = "btnR" type="submit" value="Registrar"> 
+  </div>
+</form>
+</main>
+</body>
+</html>
