@@ -77,11 +77,13 @@
         <th>Telefono</th>
         <th>direccion</th>
         <th>fecha_nacimiento</th>
+        <th>edad</th>
         <th>Actualizar</th>
         <th>Eliminar</th>
         </tr>
 
 <br>
+
     <?php   
         if ($rta = $conn -> query($sql) ){
             while ($row = $rta -> fetch_array()){
@@ -97,6 +99,13 @@
                 <td><?php echo $row["telefono"];?></td>
                 <td><?php echo $row["direccion"];?></td>
                 <td><?php echo $row["fecha_nacimiento"];?></td>
+                <?php  
+
+                    $fecha_nacimiento=$row["fecha_nacimiento"];
+                    $dia_actual = date("Y-m-d");
+                    $edad_diff = date_diff(date_create($fecha_nacimiento), date_create($dia_actual));
+                    ?>
+                <td><?php echo $row["edad"]=$edad_diff->format('%y');?></td>
                 <td><a href="FormularioActuaCli.php?id_usuario=<?php echo  $row['id_usuario'];?>" class = "btn btn-warning">Actualizar</span></a></td>
                 <td><a href="EliCli.php?id_usuario=<?php echo  $row['id_usuario'];?>" class = "btn btn-warning">Eliminar</span></a></td>
                 </tr>
